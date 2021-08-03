@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Luckiest_Guy";
+  src: url("/fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  font-size: 35px;
+  background-image: url("https://thebulletin.org/wp-content/uploads/2021/04/Tilted-Earth.jpg.webp");
+  /* background-color: #cccccc; */
+}
+
+header {
+  color: yellowgreen;
+  font-family: "Luckiest_Guy";
+  text-align: center;
+}
+
+article {
+  max-width: 1500px;
+  max-height: 400px;
+  margin: auto;
+  font-family: "Luckiest_Guy";
+  background-color: cornflowerblue;
+  /* border-radius: 25px; */
+  border-radius: 15px 100px 15px 100px;
+  border: 6px solid #7922cc;
+}
+
+footer {
+  margin: auto;
+  width: 600px;
+  height: 100px;
+  font-size: 40px;
+  font-family: "Luckiest_Guy";
+  text-align: center;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1px;
+}
+
+.start_button {
+  width: 200px;
+  background-color: yellowgreen;
+  margin: auto;
+  border-radius: 15px;
+}
