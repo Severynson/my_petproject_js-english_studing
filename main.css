@@ -1,48 +1,228 @@
+body {
+  font-size: 35px;
+  background: url('https://thebulletin.org/wp-content/uploads/2021/04/Tilted-Earth.jpg.webp')
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  backdrop-filter: blur(3px);
+}
+
 @font-face {
-  font-family: "Luckiest_Guy";
-  src: url("/fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf");
+  font-family: 'Luckiest_Guy';
+  src: url('/fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf');
   font-style: normal;
   font-weight: normal;
 }
 
-body {
-  font-size: 35px;
-  background-image: url("https://thebulletin.org/wp-content/uploads/2021/04/Tilted-Earth.jpg.webp");
-  /* background-color: #cccccc; */
-}
-
-header {
+header#greetings {
   color: yellowgreen;
-  font-family: "Luckiest_Guy";
+  font-family: 'Luckiest_Guy';
   text-align: center;
 }
 
 article {
+  /* padding-bottom: 45px; */
+  padding: 0px 10px 10px 10px;
+  /* font-size: 80%; */
   max-width: 1500px;
   max-height: 400px;
   margin: auto;
-  font-family: "Luckiest_Guy";
+  font-family: 'Luckiest_Guy';
   background-color: cornflowerblue;
   /* border-radius: 25px; */
   border-radius: 15px 100px 15px 100px;
   border: 6px solid #7922cc;
 }
 
+/* p#first--article {
+  text-size-adjust: 30%;
+} */
+
 footer {
   margin: auto;
   width: 600px;
   height: 100px;
   font-size: 40px;
-  font-family: "Luckiest_Guy";
+  font-family: 'Luckiest_Guy';
   text-align: center;
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 1px;
 }
 
-.start_button {
+.start--button {
+  text-align: center;
+  max-height: 100px;
   width: 200px;
   background-color: yellowgreen;
   margin: auto;
   border-radius: 15px;
+  border: 10px inset silver;
+  margin-top: 25px;
+  padding-bottom: 25px;
+  padding-top: 0px;
+}
+
+/* #h1--start--button {
+} */
+
+.start--button:hover {
+  width: 230px;
+  height: 100px;
+  text-shadow: 0 0 15px #0000ff;
+  text-decoration: underline;
+}
+
+.main--menu {
+  display: none;
+}
+
+header#choose--list {
+  margin: auto;
+  color: yellowgreen;
+  font-family: 'Luckiest_Guy';
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  max-width: 500px;
+  min-height: 170px;
+  border-radius: 20px;
+}
+
+div.choose--header {
+  min-height: 190;
+  background-color: rgba(223, 179, 37, 0.8);
+}
+
+#another--in--list1 {
+  background-color: rgba(141, 231, 186, 0.8);
+  width: 14em;
+  border-radius: 30px;
+  position: relative;
+  text-align: center;
+  left: 1.7em;
+  top: 0.5em;
+}
+
+#another--in--list2 {
+  background-color: rgba(141, 231, 186, 0.8);
+  width: 14em;
+  border-radius: 30px;
+  position: relative;
+  text-align: center;
+  left: 1.7em;
+  top: 0.5em;
+}
+
+#another--in--list3 {
+  background-color: rgba(141, 231, 186, 0.8);
+  width: 14em;
+  border-radius: 30px;
+  text-align: center;
+  position: relative;
+  left: 1.7em;
+  top: 0.5em;
+}
+
+#another--in--list4 {
+  background-color: rgba(141, 231, 186, 0.8);
+  width: 14em;
+  border-radius: 30px;
+  text-align: center;
+  position: relative;
+  left: 1.7em;
+  top: 0.5em;
+}
+
+.choose--food {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 10%;
+  width: 20em;
+  height: 14em;
+  top: 0.5em;
+  border-radius: 20px;
+  position: relative;
+  /* float: right; */
+  left: 0em;
+  bottom: 0em;
+}
+
+.choose--computer {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 10%;
+  width: 20em;
+  height: 14em;
+  border-radius: 20px;
+  position: relative;
+  left: 30em;
+  bottom: 17.2em;
+}
+
+.choose--git {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 10%;
+  width: 20em;
+  height: 14em;
+  border-radius: 20px;
+  position: relative;
+}
+
+.choose--create {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 10%;
+  width: 20em;
+  height: 14em;
+  border-radius: 20px;
+  position: relative;
+}
+
+#food--img {
+  margin: 5%;
+  border-radius: 30px;
+  border: 10px inset silver;
+  max-height: 80%;
+  width: 88%;
+  height: auto;
+  position: relative;
+  bottom: 1em;
+}
+
+#computer--img {
+  /* margin: 5%;
+  border-radius: 30px;
+  border: 10px inset silver;
+  max-height: 80%;
+  height: 400px;
+  width: 800px; */
+  margin: 5%;
+  border-radius: 30px;
+  border: 10px inset silver;
+  max-height: 80%;
+  width: 88%;
+  height: auto;
+  position: relative;
+  bottom: 1em;
+}
+
+#git--img {
+  margin: 5%;
+  border-radius: 30px;
+  border: 10px inset silver;
+  max-height: 80%;
+  width: 88%;
+  height: auto;
+  position: relative;
+  bottom: 1em;
+}
+
+#create--img {
+  margin: 5%;
+  border-radius: 30px;
+  border: 10px inset silver;
+  max-height: 80%;
+  width: 88%;
+  height: auto;
+  position: relative;
+  bottom: 1em;
 }
