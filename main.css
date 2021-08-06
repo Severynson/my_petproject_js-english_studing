@@ -6,7 +6,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  backdrop-filter: blur(3px);
+  /* backdrop-filter: blur(3px); */
 }
 
 @font-face {
@@ -77,6 +77,7 @@ footer {
 
 .main--menu {
   display: none;
+  border: #7922cc;
 }
 
 header#choose--list {
@@ -97,95 +98,110 @@ div.choose--header {
 
 #another--in--list1 {
   background-color: rgba(141, 231, 186, 0.8);
-  width: 14em;
+  width: 90%;
   border-radius: 30px;
   position: relative;
   text-align: center;
-  left: 1.7em;
-  top: 0.5em;
+  left: 5%;
+  bottom: 3%;
+  height: 1em;
 }
 
 #another--in--list2 {
   background-color: rgba(141, 231, 186, 0.8);
-  width: 14em;
+  width: 90%;
   border-radius: 30px;
   position: relative;
   text-align: center;
-  left: 1.7em;
-  top: 0.5em;
+  left: 5%;
+  bottom: 3%;
+  height: 1.5em;
 }
 
 #another--in--list3 {
   background-color: rgba(141, 231, 186, 0.8);
-  width: 14em;
+  width: 90%;
   border-radius: 30px;
   text-align: center;
   position: relative;
-  left: 1.7em;
-  top: 0.5em;
+  left: 5%;
+  bottom: 3%;
 }
 
 #another--in--list4 {
   background-color: rgba(141, 231, 186, 0.8);
-  width: 14em;
+  width: 90%;
   border-radius: 30px;
   text-align: center;
   position: relative;
-  left: 1.7em;
-  top: 0.5em;
+  left: 5%;
+  bottom: 3%;
 }
 
 .choose--food {
   background-color: rgba(255, 255, 255, 0.8);
-  margin: 10%;
-  width: 20em;
-  height: 14em;
-  top: 0.5em;
+
+  /* width: 40%;
+  height: auto; */
+  width: 25%;
+  height: auto;
+
   border-radius: 20px;
-  position: relative;
-  /* float: right; */
-  left: 0em;
-  bottom: 0em;
+  position: absolute;
+
+  top: 7em;
+  left: 20%;
 }
 
 .choose--computer {
   background-color: rgba(255, 255, 255, 0.8);
-  margin: 10%;
-  width: 20em;
-  height: 14em;
+
+  /* width: 40%; */
+  /* height: 39%; */
+  width: 25%;
+  height: auto;
+
   border-radius: 20px;
-  position: relative;
-  left: 30em;
-  bottom: 17.2em;
+  position: absolute;
+
+  left: 55%;
+  top: 7em;
 }
 
 .choose--git {
   background-color: rgba(255, 255, 255, 0.8);
-  margin: 10%;
-  width: 20em;
-  height: 14em;
+
+  width: 25%;
+  height: auto;
+
   border-radius: 20px;
-  position: relative;
+  position: absolute;
+  top: 60%;
+  left: 20%;
 }
 
 .choose--create {
   background-color: rgba(255, 255, 255, 0.8);
-  margin: 10%;
-  width: 20em;
-  height: 14em;
+
+  width: 25%;
+  height: auto;
+
   border-radius: 20px;
-  position: relative;
+  position: absolute;
+  top: 60%;
+  left: 55%;
 }
 
 #food--img {
-  margin: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
   border-radius: 30px;
-  border: 10px inset silver;
-  max-height: 80%;
+  border: 0.1em inset silver;
+  /* max-height: 60%; */
   width: 88%;
   height: auto;
   position: relative;
-  bottom: 1em;
+  bottom: 0.45em;
 }
 
 #computer--img {
@@ -198,31 +214,31 @@ div.choose--header {
   margin: 5%;
   border-radius: 30px;
   border: 10px inset silver;
-  max-height: 80%;
+  /* max-height: 60%; */
   width: 88%;
   height: auto;
   position: relative;
-  bottom: 1em;
+  bottom: 12%;
 }
 
 #git--img {
   margin: 5%;
   border-radius: 30px;
   border: 10px inset silver;
-  max-height: 80%;
+  /* max-height: 80%; */
   width: 88%;
   height: auto;
   position: relative;
-  bottom: 1em;
+  bottom: 10%;
 }
 
 #create--img {
   margin: 5%;
   border-radius: 30px;
   border: 10px inset silver;
-  max-height: 80%;
+  /* max-height: 80%; */
   width: 88%;
   height: auto;
   position: relative;
-  bottom: 1em;
+  bottom: 10%;
 }
