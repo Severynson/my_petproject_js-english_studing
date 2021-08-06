@@ -77,7 +77,6 @@ footer {
 
 .main--menu {
   display: none;
-  border: #7922cc;
 }
 
 header#choose--list {
@@ -92,57 +91,28 @@ header#choose--list {
 }
 
 div.choose--header {
-  min-height: 190;
+  /* min-height: 190; */
+  position: relative;
+  bottom: 1em;
   background-color: rgba(223, 179, 37, 0.8);
 }
 
-#another--in--list1 {
+.another--in--list {
   background-color: rgba(141, 231, 186, 0.8);
   width: 90%;
   border-radius: 30px;
   position: relative;
   text-align: center;
   left: 5%;
-  bottom: 3%;
-  height: 1em;
-}
-
-#another--in--list2 {
-  background-color: rgba(141, 231, 186, 0.8);
-  width: 90%;
-  border-radius: 30px;
-  position: relative;
-  text-align: center;
-  left: 5%;
-  bottom: 3%;
-  height: 1.5em;
-}
-
-#another--in--list3 {
-  background-color: rgba(141, 231, 186, 0.8);
-  width: 90%;
-  border-radius: 30px;
-  text-align: center;
-  position: relative;
-  left: 5%;
-  bottom: 3%;
-}
-
-#another--in--list4 {
-  background-color: rgba(141, 231, 186, 0.8);
-  width: 90%;
-  border-radius: 30px;
-  text-align: center;
-  position: relative;
-  left: 5%;
-  bottom: 3%;
+  bottom: 0.5em;
 }
 
 .choose--food {
   background-color: rgba(255, 255, 255, 0.8);
+  border: 0.3em inset silver;
 
-  /* width: 40%;
-  height: auto; */
+  margin-top: -2%;
+
   width: 25%;
   height: auto;
 
@@ -155,90 +125,76 @@ div.choose--header {
 
 .choose--computer {
   background-color: rgba(255, 255, 255, 0.8);
+  border: 0.3em inset silver;
 
-  /* width: 40%; */
-  /* height: 39%; */
+  margin-top: -2%;
+
   width: 25%;
   height: auto;
 
   border-radius: 20px;
   position: absolute;
 
-  left: 55%;
   top: 7em;
+  left: 55%;
 }
 
 .choose--git {
   background-color: rgba(255, 255, 255, 0.8);
+  border: 0.3em inset silver;
 
   width: 25%;
   height: auto;
 
   border-radius: 20px;
   position: absolute;
-  top: 60%;
+
+  top: 59%;
   left: 20%;
 }
 
 .choose--create {
   background-color: rgba(255, 255, 255, 0.8);
+  border: 0.3em inset silver;
 
   width: 25%;
   height: auto;
 
   border-radius: 20px;
   position: absolute;
-  top: 60%;
+
+  top: 58.6%;
   left: 55%;
 }
 
-#food--img {
+.choose--food:hover {
+  border: 0.1em inset silver;
+}
+
+.choose--computer:hover {
+  border: 0.1em inset silver;
+}
+
+.choose--git:hover {
+  border: 0.1em inset silver;
+}
+
+.choose--create:hover {
+  border: 0.1em inset silver;
+}
+
+.choose--img {
   margin-left: 5%;
   margin-right: 5%;
+  margin-bottom: -0.7em;
   border-radius: 30px;
   border: 0.1em inset silver;
-  /* max-height: 60%; */
   width: 88%;
   height: auto;
   position: relative;
-  bottom: 0.45em;
+  bottom: 1.1em;
 }
 
-#computer--img {
-  /* margin: 5%;
-  border-radius: 30px;
-  border: 10px inset silver;
-  max-height: 80%;
-  height: 400px;
-  width: 800px; */
-  margin: 5%;
-  border-radius: 30px;
-  border: 10px inset silver;
-  /* max-height: 60%; */
-  width: 88%;
-  height: auto;
-  position: relative;
-  bottom: 12%;
-}
-
-#git--img {
-  margin: 5%;
-  border-radius: 30px;
-  border: 10px inset silver;
-  /* max-height: 80%; */
-  width: 88%;
-  height: auto;
-  position: relative;
-  bottom: 10%;
-}
-
-#create--img {
-  margin: 5%;
-  border-radius: 30px;
-  border: 10px inset silver;
-  /* max-height: 80%; */
-  width: 88%;
-  height: auto;
-  position: relative;
-  bottom: 10%;
+.first--test {
+  display: none;
 }
