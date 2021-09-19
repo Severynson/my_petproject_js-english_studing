@@ -6,7 +6,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  /* backdrop-filter: blur(3px); */
 }
 
 @font-face {
@@ -22,24 +21,6 @@ header#greetings {
   text-align: center;
 }
 
-article {
-  /* padding-bottom: 45px; */
-  padding: 0px 10px 10px 10px;
-  /* font-size: 80%; */
-  max-width: 1500px;
-  max-height: 400px;
-  margin: auto;
-  font-family: 'Luckiest_Guy';
-  background-color: cornflowerblue;
-  /* border-radius: 25px; */
-  border-radius: 15px 100px 15px 100px;
-  border: 6px solid #7922cc;
-}
-
-/* p#first--article {
-  text-size-adjust: 30%;
-} */
-
 footer {
   margin: auto;
   width: 600px;
@@ -50,33 +31,6 @@ footer {
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 1px;
-}
-
-.start--button {
-  text-align: center;
-  max-height: 100px;
-  width: 200px;
-  background-color: yellowgreen;
-  margin: auto;
-  border-radius: 15px;
-  border: 10px inset silver;
-  margin-top: 25px;
-  padding-bottom: 25px;
-  padding-top: 0px;
-}
-
-/* #h1--start--button {
-} */
-
-.start--button:hover {
-  width: 230px;
-  height: 100px;
-  text-shadow: 0 0 15px #0000ff;
-  text-decoration: underline;
-}
-
-.main--menu {
-  display: none;
 }
 
 header#choose--list {
@@ -91,11 +45,32 @@ header#choose--list {
 }
 
 div.choose--header {
-  /* min-height: 190; */
   position: relative;
   bottom: 1em;
   background-color: rgba(223, 179, 37, 0.8);
 }
+
+.them--icons {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  /* max-width: 1350px;
+  max-height: auto; */
+  /* grid-auto-columns: minmax(auto, 400px); */
+  justify-content: center;
+  grid-gap: 1em;
+}
+
+@media screen and (min-width: 1281px) {
+  .them--icons {
+    width: 1350px;
+    height: auto;
+    align-items: center;
+  }
+}
+
+/* .them--icon {
+  justify-content: center;
+} */
 
 .another--in--list {
   background-color: rgba(141, 231, 186, 0.8);
@@ -105,66 +80,6 @@ div.choose--header {
   text-align: center;
   left: 5%;
   bottom: 0.5em;
-}
-
-.choose--food {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 0.3em inset silver;
-
-  margin-top: -2%;
-
-  width: 25%;
-  height: auto;
-
-  border-radius: 20px;
-  position: absolute;
-
-  top: 7em;
-  left: 20%;
-}
-
-.choose--computer {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 0.3em inset silver;
-
-  margin-top: -2%;
-
-  width: 25%;
-  height: auto;
-
-  border-radius: 20px;
-  position: absolute;
-
-  top: 7em;
-  left: 55%;
-}
-
-.choose--git {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 0.3em inset silver;
-
-  width: 25%;
-  height: auto;
-
-  border-radius: 20px;
-  position: absolute;
-
-  top: 59%;
-  left: 20%;
-}
-
-.choose--create {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 0.3em inset silver;
-
-  width: 25%;
-  height: auto;
-
-  border-radius: 20px;
-  position: absolute;
-
-  top: 58.6%;
-  left: 55%;
 }
 
 .choose--food:hover {
@@ -198,3 +113,63 @@ div.choose--header {
 .first--test {
   display: none;
 }
+
+/* .choose--food {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0.3em inset silver;
+
+    margin-top: -2%;
+
+    width: 25%;
+    height: auto;
+
+    border-radius: 20px;
+    position: absolute;
+
+    top: 7em;
+    left: 20%;
+  }
+
+  .choose--computer {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0.3em inset silver;
+
+    margin-top: -2%;
+
+    width: 25%;
+    height: auto;
+
+    border-radius: 20px;
+    position: absolute;
+
+    top: 7em;
+    left: 55%;
+  }
+
+  .choose--git {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0.3em inset silver;
+
+    width: 25%;
+    height: auto;
+
+    border-radius: 20px;
+    position: absolute;
+
+    top: 59%;
+    left: 20%;
+  }
+
+  .choose--create {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 0.3em inset silver;
+
+    width: 25%;
+    height: auto;
+
+    border-radius: 20px;
+    position: absolute;
+
+    top: 58.6%;
+    left: 55%;
+  } */

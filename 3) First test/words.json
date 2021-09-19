@@ -1,0 +1,9 @@
+{
+  "food": {
+    "banana": "банан",
+    "chocolate": "шоколад"
+  },
+  "computer": {
+    "mouse": "мишка"
+  }
+}

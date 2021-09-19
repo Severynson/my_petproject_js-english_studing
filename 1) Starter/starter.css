@@ -1,0 +1,75 @@
+* {
+  cursor: default;
+  font-family: 'Luckiest_Guy';
+}
+
+body {
+  font-size: 35px;
+  background: url('https://thebulletin.org/wp-content/uploads/2021/04/Tilted-Earth.jpg.webp')
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@font-face {
+  font-family: 'Luckiest_Guy';
+  src: url('/fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+header#greetings {
+  color: yellowgreen;
+  text-align: center;
+}
+
+#hr-between-header-and-article {
+  margin-bottom: 20px;
+  margin-top: -30px;
+}
+
+article {
+  padding: 0px 10px 10px 10px;
+  max-width: 1500px;
+  /* min-height: 500px;
+  min-width: 800px; */
+  margin: auto;
+  background-color: cornflowerblue;
+  border-radius: 15px 100px 15px 100px;
+  border: 6px solid #7922cc;
+}
+
+footer {
+  margin: auto;
+  width: 500px;
+  height: 80px;
+  font-size: 40px;
+  text-align: center;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1px;
+  padding-bottom: 30px;
+}
+
+.start--button {
+  min-height: 80px;
+  min-width: 160px;
+  border-radius: 15px;
+  background-color: yellowgreen;
+  padding-top: 12px;
+  border: none;
+  font-size: 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.start--button:hover {
+  min-width: 170px;
+  min-height: 90px;
+  text-shadow: 0 0 15px #0000ff;
+  text-decoration: underline;
+}
