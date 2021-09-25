@@ -28,63 +28,7 @@ header {
   text-align: center;
 }
 
-#check-button {
-  height: 150px;
-  width: 150px;
-  border-radius: 15px;
-  border: 0.1em inset silver;
-}
-
-.container input {
-  display: grid;
-  text-align: center;
-  /* font-size: 22px; */
-  /* height: 150px;
-  width: 32em; */
-  background-color: rgba(255, 177, 8, 0.95);
-  font-family: sans-serif;
-  font-size: 45px;
-  border-radius: 15px;
-  /* border: silver solid 15px; */
-  /* height: 90%;
-  width: 80%; */
-}
-
-/* .form {
-  flex: 2;
-}
-
-.img {
-  flex: 1;
-} */
-
-.example {
-  text-align: center;
-  background-color: rgba(255, 177, 8, 0.95);
-  border-radius: 15px;
-  font-size: 45px;
-}
-
-.container p {
-  padding-top: 23px;
-}
-
-.container {
-  /* margin-top: 10%;
-  display: flex;
-  padding: 1em;
-  width: 85%;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-between;
-  margin-left: 5%; */
-  display: grid;
-  grid-template-columns: 3fr 1fr 3fr;
-  background-color: rgba(255, 255, 255, 0.7);
-  gap: 10px;
-  padding: 10px;
-  border-radius: 15px;
-}
+/* ------------------------------------------------------ */
 
 #task--explaining {
   background-color: rgba(255, 255, 255, 0.85);
@@ -100,4 +44,50 @@ header {
 #container--4--explanation {
   display: grid;
   justify-items: center;
+}
+
+/* ------------------------------------------------------ */
+
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  background-color: rgba(255, 255, 255, 0.7);
+  gap: 10px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.container input {
+  display: grid;
+  text-align: center;
+  background-color: rgba(255, 177, 8, 0.95);
+  font-family: sans-serif;
+  font-size: 40px;
+  border-radius: 15px;
+  /* border: silver solid 15px; */
+  /* height: 90%;
+  width: 80%; */
+}
+
+.check-button {
+  display: grid;
+  justify-items: center;
+}
+
+#check-button {
+  height: 150px;
+  width: 150px;
+  border-radius: 15px;
+  border: 0.1em inset silver;
+}
+
+.example {
+  text-align: center;
+  background-color: rgba(255, 177, 8, 0.95);
+  border-radius: 15px;
+  font-size: 45px;
+}
+
+.example p {
+  padding-top: 23px;
 }

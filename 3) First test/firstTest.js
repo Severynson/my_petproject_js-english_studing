@@ -1,6 +1,6 @@
 'use strict';
 let GoButton = document.getElementById('check-button');
-let question = document.getElementById('form');
+let question = document.getElementById('input');
 let exampleWord = document.getElementById('example-word');
 
 function readTextFile(file, callback) {
@@ -16,6 +16,7 @@ function readTextFile(file, callback) {
 }
 
 //usage:
+
 readTextFile('words.json', function (text) {
   var data = JSON.parse(text);
   console.log(data);
@@ -23,12 +24,14 @@ readTextFile('words.json', function (text) {
   /////////////////////////////////////////////
   ////Exercise inside because of asyncronus////
   /////////////////////////////////////////////
+
   console.log(question);
   GoButton.addEventListener('click', e => {
     exampleWord.textContent = 'changed now';
     e.preventDefault();
     console.log('ssss');
     console.log(question);
+    question.value = 'ref';
   });
   /////////////////////////////////////////////
   /////////////////////////////////////////////
