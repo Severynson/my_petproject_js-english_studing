@@ -1,6 +1,36 @@
 'use strict';
+let GoButton = document.getElementById('check-button');
+let question = document.getElementById('form');
+let exampleWord = document.getElementById('example-word');
 
-const foodJson = document.querySelector('words.json');
+function readTextFile(file, callback) {
+  var rawFile = new XMLHttpRequest();
+  rawFile.overrideMimeType('application/json');
+  rawFile.open('GET', file, true);
+  rawFile.onreadystatechange = function () {
+    if (rawFile.readyState === 4 && rawFile.status == '200') {
+      callback(rawFile.responseText);
+    }
+  };
+  rawFile.send(null);
+}
 
-let JsonToArray = JSON.parse('words.json');
-console.log(JsonToArray);
+//usage:
+readTextFile('words.json', function (text) {
+  var data = JSON.parse(text);
+  console.log(data);
+
+  /////////////////////////////////////////////
+  ////Exercise inside because of asyncronus////
+  /////////////////////////////////////////////
+  console.log(question);
+  GoButton.addEventListener('click', e => {
+    exampleWord.textContent = 'changed now';
+    e.preventDefault();
+    console.log('ssss');
+    console.log(question);
+  });
+  /////////////////////////////////////////////
+  /////////////////////////////////////////////
+  /////////////////////////////////////////////
+});
