@@ -1,77 +1,139 @@
 'use strict';
-// import whichThemWasChoosen from '/2) choosingActions/choosingAction.js';
-// console.log(whichThemWasChoosen);
 
-let GoButton = document.getElementById('check-button');
-let inputWord = document.getElementById('input');
-let exampleWord = document.getElementById('example-word');
+const GoButton = document.getElementById('check-button');
+const inputWord = document.getElementById('input');
+const exampleWordField = document.getElementById('example-word');
+const helpContainer = document.getElementById('task--help--container');
+helpContainer.style.display = 'none';
 
-function readTextFile(file, callback) {
-  var rawFile = new XMLHttpRequest();
-  rawFile.overrideMimeType('application/json');
-  rawFile.open('GET', file, true);
-  rawFile.onreadystatechange = function () {
-    if (rawFile.readyState === 4 && rawFile.status == '200') {
-      callback(rawFile.responseText);
-    }
-  };
-  rawFile.send(null);
+class JsonReaderAndConvertToObj {
+  readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType('application/json');
+    rawFile.open('GET', file, true);
+    rawFile.onreadystatechange = function () {
+      if (rawFile.readyState === 4 && rawFile.status == '200') {
+        let readedJson = rawFile.responseText;
+        let askedObj = JSON.parse(readedJson);
+        callback(askedObj);
+      }
+    };
+    rawFile.send(null);
+  }
 }
 
-//usage:
+const wordList = new JsonReaderAndConvertToObj();
+wordList.readTextFile('words.json', insideOfAsync);
 
-readTextFile('words.json', function (text) {
-  var data = JSON.parse(text);
-  console.log(data);
-
-  /////////////////////////////////////////////
-  ////Exercise inside because of asyncronus////
-  /////////////////////////////////////////////
-
-  const foods = Object.entries(data.food);
-  console.log(foods);
-
-  GoButton.addEventListener('click', whatToCall);
-  let pairOfWords = 0;
-  exampleWord.textContent = foods[pairOfWords][1];
-
-  let mistakesInOneWord = 0;
+function insideOfAsync(data) {
+  let themWordsArray = Object.entries(data.food);
+  console.log(themWordsArray);
+  let actualPair = 0;
+  let tryTime = 0;
+  let exampleWord = themWordsArray[actualPair][1];
+  let awaitedWord = themWordsArray[actualPair][0];
+  exampleWordField.textContent = exampleWord;
 
   function whatToCall() {
-    if (mistakesInOneWord === 0) {
-      ifCorrectThanNext();
-    } else if (mistakesInOneWord === 1) {
-      console.log('That is second time:');
-      secondMistake();
-    }
-  }
-  function ifCorrectThanNext() {
-    if (inputWord.value == foods[pairOfWords][0]) {
-      console.log('true!');
-      pairOfWords++;
-      exampleWord.textContent = foods[pairOfWords][1];
-    } else if (inputWord.value !== foods[pairOfWords][0]) {
-      console.log(
-        `You are stupid, not correct!!! First letter of the correct word was: ${foods[pairOfWords][0]}`
-      );
-      mistakesInOneWord++;
-    } else {
-      return;
+    if (tryTime === 0) {
+      console.log('whatToCall => first try');
+      firstTry();
+    } else if (tryTime === 1) {
+      console.log('whatToCall => second try');
+      secondTry();
+    } else if (tryTime === 2) {
+      console.log('whatToCall => third try');
+      thirdTry();
+    } else if (tryTime === 3) {
+      console.log('whatToCall => failAllTries');
+      failAllTries();
     }
   }
 
-  function secondMistake() {
-    if (inputWord.value == foods[pairOfWords][0]) {
+  function wordCheck() {
+    if (inputWord.value === awaitedWord) {
       console.log('true!');
-      pairOfWords++;
-      exampleWord.textContent = foods[pairOfWords][1];
-      mistakesInOneWord = 0;
-    } else if (inputWord.value !== foods[pairOfWords][0]) {
-      console.log(
-        `You are stupid, not correct!!! First three leters of the correct word was: ${foods[pairOfWords][0]}`
-      );
+      actualPair++;
+      tryTime = 0;
+      exampleWord = themWordsArray[actualPair][1];
+      awaitedWord = themWordsArray[actualPair][0];
+      console.log(themWordsArray[actualPair][1]);
+      exampleWordField.textContent = exampleWord;
+    } else if (inputWord.value !== awaitedWord) {
+      console.log('wordCheck() => Not correct!');
+      tryTime++;
+      helpContainer.style.display = 'grid';
+      let which = '';
+      let oneOrMore = '';
+      let letters = '';
+      if (tryTime > 1) {
+        oneOrMore = `s`;
+      }
+      if (tryTime === 1) {
+        which = 'First one';
+      } else if (tryTime === 2) {
+        which = 'First two';
+      } else if (tryTime === 3) {
+        which = 'First three';
+      }
+      helpContainer.textContent = `Inputed word is not correct! The ${which} letter${oneOrMore} must to be: "${letters}"`;
     }
   }
-});
 
-///////////////////////////////////////////////////
+  function firstTry() {
+    wordCheck();
+    console.log('firstTry();');
+  }
+  function secondTry() {
+    wordCheck();
+    console.log('secondTry();');
+  }
+  function thirdTry() {
+    wordCheck();
+    console.log('thirdTry();');
+  }
+  function failAllTries() {
+    console.log(`Correct word has to be: "${awaitedWord}"`);
+    actualPair++;
+    tryTime = 0;
+    exampleWord = themWordsArray[actualPair][1];
+    awaitedWord = themWordsArray[actualPair][0];
+    console.log(themWordsArray[actualPair][1]);
+    exampleWordField.textContent = exampleWord;
+  }
+
+  GoButton.addEventListener('click', whatToCall);
+}
+
+// function checkX() {
+//   x = 95;
+// }
+
+// checkX();
+// console.log(x);
+
+// class Idiot {
+//   idiots() {
+//     console.log(`is an idiot!!!`);
+//   }
+// }
+
+// const ivan = new Idiot('Ivan');
+// ivan.idiots();
+
+/////////////////////////////////////////////
+////Exercise inside because of asyncronus////
+/////////////////////////////////////////////
+
+// const foods = Object.entries(data.food);
+// console.log(foods);
+
+//
+// var pairOfWords = 0;
+
+//
+
+//   );
+//   mistakesInOneWord++;
+// } else {
+//   return;

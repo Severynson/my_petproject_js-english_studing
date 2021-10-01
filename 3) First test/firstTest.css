@@ -30,7 +30,7 @@ header {
 
 /* ------------------------------------------------------ */
 
-#task--explaining {
+.task--explaining {
   background-color: rgba(255, 255, 255, 0.85);
   padding: 10px 5px 5px 5px;
   border-radius: 15px;
@@ -41,7 +41,7 @@ header {
   border: 5px solid grey;
 }
 
-#container--4--explanation {
+.container--4 {
   display: grid;
   justify-items: center;
 }
