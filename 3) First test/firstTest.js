@@ -35,15 +35,9 @@ function insideOfAsync(data) {
   exampleWordField.textContent = exampleWord;
 
   function whatToCall() {
-    if (tryTime === 0) {
+    if (tryTime === 0 || tryTime === 1 || tryTime === 2) {
       console.log('whatToCall => first try');
-      firstTry();
-    } else if (tryTime === 1) {
-      console.log('whatToCall => second try');
-      secondTry();
-    } else if (tryTime === 2) {
-      console.log('whatToCall => third try');
-      thirdTry();
+      wordCheck();
     } else if (tryTime === 3) {
       console.log('whatToCall => failAllTries');
       failAllTries();
@@ -56,23 +50,18 @@ function insideOfAsync(data) {
       console.log('true!');
       nextWord();
     } else if (inputWord.value !== awaitedWord) {
-      notCorrect();
-
-      // if (awaitedWord.length > 1) {
-      //   ifNotCorrectButMoreThanOneLetter();
-      // } else {
-      //   helpContainer.style.display = 'grid';
-      //   helpContainer.textContent = `Inputed word is not correct! The correct word was: "${awaitedWord}". This word has just one letter, so go and try to write correct next word`;
-      //   setTimeout(() => {
-      //     helpContainer.style.display = 'none';
-      //   }, 2000);
-      //   actualPair++;
-      //   tryTime = 0;
-      //   exampleWord = themWordsArray[actualPair][1];
-      //   awaitedWord = themWordsArray[actualPair][0];
-      //   console.log(themWordsArray[actualPair][1]);
-      //   exampleWordField.textContent = exampleWord;
-      // }
+      if (awaitedWord.length === 1 && tryTime === 0) {
+        failAllTries();
+        nextWord();
+      } else if (awaitedWord.length === 2 && tryTime === 1) {
+        failAllTries();
+        nextWord();
+      } else if (awaitedWord.length === 3 && tryTime === 2) {
+        failAllTries();
+        nextWord();
+      } else {
+        notCorrect();
+      }
     }
   }
 
@@ -117,63 +106,13 @@ function insideOfAsync(data) {
     exampleWordField.textContent = exampleWord;
   }
 
-  function firstTry() {
-    wordCheck();
-    console.log('firstTry();');
-  }
-  function secondTry() {
-    wordCheck();
-    console.log('secondTry();');
-  }
-  function thirdTry() {
-    wordCheck();
-    console.log('thirdTry();');
-  }
   function failAllTries() {
-    // console.log(`Correct word has to be: "${awaitedWord}"`);
+    helpContainer.style.display = 'grid';
     helpContainer.textContent = `Inputed word is not correct! The correct word was: "${awaitedWord}"`;
     setTimeout(() => {
       helpContainer.style.display = 'none';
     }, 2000);
   }
 
-  // function ifNotCorrectButMoreThanOneLetter() {
-  //   if (awaitedWord.length > 2) {
-
-  // }
-
   GoButton.addEventListener('click', whatToCall);
 }
-
-// function checkX() {
-//   x = 95;
-// }
-
-// checkX();
-// console.log(x);
-
-// class Idiot {
-//   idiots() {
-//     console.log(`is an idiot!!!`);
-//   }
-// }
-
-// const ivan = new Idiot('Ivan');
-// ivan.idiots();
-
-/////////////////////////////////////////////
-////Exercise inside because of asyncronus////
-/////////////////////////////////////////////
-
-// const foods = Object.entries(data.food);
-// console.log(foods);
-
-//
-// var pairOfWords = 0;
-
-//
-
-//   );
-//   mistakesInOneWord++;
-// } else {
-//   return;
