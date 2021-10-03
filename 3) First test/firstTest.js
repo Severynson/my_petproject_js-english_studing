@@ -1,5 +1,7 @@
 'use strict';
 
+let choosenThem = localStorage.getItem('ChoosenThem');
+console.log(choosenThem);
 const GoButton = document.getElementById('check-button');
 const inputWord = document.getElementById('input');
 const exampleWordField = document.getElementById('example-word');
@@ -26,7 +28,7 @@ const wordList = new JsonReaderAndConvertToObj();
 wordList.readTextFile('words.json', insideOfAsync);
 
 function insideOfAsync(data) {
-  let themWordsArray = Object.entries(data.food);
+  let themWordsArray = Object.entries(data[choosenThem]);
   console.log(themWordsArray);
   let actualPair = 0;
   let tryTime = 0;

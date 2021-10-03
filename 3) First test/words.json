@@ -7,6 +7,14 @@
     "chocolate": "шоколад"
   },
   "computer": {
-    "mouse": "мишка"
+    "mouse": "мишка",
+    "keybord": "клавіатура",
+    "monitor": "монітор"
+  },
+  "git": {
+    "commit": "коміт",
+    "branch": "гілка",
+    "merge": "злиття",
+    "repository": "сховище"
   }
 }

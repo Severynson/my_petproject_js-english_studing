@@ -6,28 +6,35 @@ const buttonChooseGitThem = document.querySelector('.choose--git');
 const buttonChooseCreateNewList = document.querySelector('.choose--create');
 
 //  ---------------------------functions------------------------
+var whichThemWasChoosen;
 
 const chooseFoodThem = function (e) {
   window.open('/3) First test/firstTest.html', '_self');
-  // document.createElement('div').className('foodThemChoosen');
-  // export let whichThemWasChoosen = 'food';
+  whichThemWasChoosen = 'food';
+  localStorage.setItem('ChoosenThem', whichThemWasChoosen);
 };
 
-// const chooseComputerThem = function (e) {
-//   console.log('eee');
-// };
+const chooseComputerThem = function (e) {
+  window.open('/3) First test/firstTest.html', '_self');
+  whichThemWasChoosen = 'computer';
+  localStorage.setItem('ChoosenThem', whichThemWasChoosen);
+};
 
-// const chooseGitThem = function (e) {
-//   console.log('eee');
-// };
+const chooseGitThem = function (e) {
+  window.open('/3) First test/firstTest.html', '_self');
+  whichThemWasChoosen = 'git';
+  localStorage.setItem('ChoosenThem', whichThemWasChoosen);
+};
 
 // const chooseCreateNewList = function (e) {
-//   console.log('eee');
+//   window.open('/3) First test/firstTest.html', '_self');
+//   whichThemWasChoosen = 'food';
+//   localStorage.setItem('ChoosenThem', whichThemWasChoosen);
 // };
 
 // ------------------------buttons--event--listeners----------
 
 buttonChooseFoodThem.addEventListener('click', chooseFoodThem);
-// buttonChooseComputerThem.addEventListener('click', chooseComputerThem);
-// buttonChooseGitThem.addEventListener('click', chooseGitThem);
+buttonChooseComputerThem.addEventListener('click', chooseComputerThem);
+buttonChooseGitThem.addEventListener('click', chooseGitThem);
 // buttonChooseCreateNewList.addEventListener('click', chooseCreateNewList);
