@@ -82,12 +82,14 @@ function insideOfAsync(data) {
       which = 'First three';
     }
 
+    let arrWithLetters = awaitedWord.split('');
+
     if (tryTime === 0) {
-      letters = '!!!!!!!!';
+      letters = `${arrWithLetters[0]}`;
     } else if (tryTime === 1) {
-      letters = '111111';
+      letters = `${arrWithLetters[0]}${arrWithLetters[1]}`;
     } else if (tryTime === 2) {
-      letters = '222222';
+      letters = `${arrWithLetters[0]}${arrWithLetters[1]}${arrWithLetters[2]}`;
     }
 
     if (tryTime !== 3) {
