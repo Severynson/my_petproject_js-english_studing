@@ -35,6 +35,17 @@ function insideOfAsync(data) {
   exampleWordField.textContent = exampleWord;
 
   function whatToCall() {
+    console.log(themWordsArray.length);
+    console.log(actualPair);
+
+    if (actualPair + 1 <= themWordsArray.length) {
+      firstExercise();
+    } else {
+      console.log(`Why doesn't work!?`);
+    }
+  }
+
+  function firstExercise() {
     if (tryTime === 0 || tryTime === 1 || tryTime === 2) {
       console.log('whatToCall => first try');
       wordCheck();
@@ -115,6 +126,5 @@ function insideOfAsync(data) {
       helpContainer.style.display = 'none';
     }, 2000);
   }
-
   GoButton.addEventListener('click', whatToCall);
 }
