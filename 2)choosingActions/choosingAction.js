@@ -9,19 +9,19 @@ const buttonChooseCreateNewList = document.querySelector('.choose--create');
 var whichThemWasChoosen;
 
 const chooseFoodThem = function (e) {
-  window.open('/3) First test/firstTest.html', '_self');
+  window.open('/3)Test/firstTest.html', '_self');
   whichThemWasChoosen = 'food';
   localStorage.setItem('ChoosenThem', whichThemWasChoosen);
 };
 
 const chooseComputerThem = function (e) {
-  window.open('/3) First test/firstTest.html', '_self');
+  window.open('/3)Test/firstTest.html', '_self');
   whichThemWasChoosen = 'computer';
   localStorage.setItem('ChoosenThem', whichThemWasChoosen);
 };
 
 const chooseGitThem = function (e) {
-  window.open('/3) First test/firstTest.html', '_self');
+  window.open('/3)Test/firstTest.html', '_self');
   whichThemWasChoosen = 'git';
   localStorage.setItem('ChoosenThem', whichThemWasChoosen);
 };
